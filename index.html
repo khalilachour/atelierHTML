@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .images {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+            margin-top: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 10px; /* Add margin for spacing */
+        }
+
+        .images img {
+            height: 125px;
+            width: 125px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0; /* Optional background color */
+        }
+
+        /* Styles for the inscription page content */
+        #inscription-content {
+            display: none;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projets et taches</a></li>
+                <li><a href="#">Liste employes</a></li>
+                <li><a href="#" id="inscription-link">Inscription</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <img src="SmartAu.png" alt="logo" height="300" width="800"/>
+        <h2><strong>Bienvenue sur notre site!</strong></h2>
+        <p>Nous proposons une gestion des tâches et projets dans notre entreprise.</p>
+        <h2><strong>Nos Valeurs</strong></h2>
+        <div class="images">
+            <div class="image-container">
+                <img src="C:/Users/user/Downloads/cuberbull.png" alt="photo 1"/>
+                <p class="description">
+                    aizlazbvakzj0vbka
+                    j0vbbrakebvabvavalebv
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="C:/Users/user/Downloads/cuberbull.png" alt="photo 2"/>
+                <p class="description">
+                    hbjezbajvbauhrm
+                    uerhiavlavearhvbajkebvjab
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="C:/Users/user/Downloads/cuberbull.png" alt="photo 3"/>
+                <p class="description">
+                    oihafazegfugahjrf
+                    aiebvjdvbkfkdbfldfqlskb
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Inscription Page Content -->
+    <div id="inscription-content">
+        <h2>Formulaire d'Inscription</h2>
+        <form>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required pattern="[A-Za-z]{2,}" title="Veuillez entrer un nom valide (lettres uniquement)">
+
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required pattern="[A-Za-z]{2,}" title="Veuillez entrer un prénom valide (lettres uniquement)">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telephone">Téléphone:</label>
+            <input type="tel" id="telephone" name="telephone" required pattern="[0-9]{8}" title="Veuillez entrer un numéro de téléphone valide (8 chiffres)">
+
+            <label for="dob">Date de naissance:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$"
+                title="Le mot de passe doit contenir au moins 8 caractères, incluant au moins un chiffre, une lettre minuscule et une lettre majuscule.">
+
+            <button type="submit">Inscrire</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Contactez-nous par email: <a href="mailto:khaliloachouro@gmail.com">khaliloachouro@gmail.com</a></p>
+        <p>Adresse: fdsqf, tunis, ariana</p>
+    </footer>
+
+    <!-- JavaScript to toggle the visibility of the inscription form -->
+    <script>
+        document.getElementById('inscription-link').addEventListener('click', function() {
+            var inscriptionContent = document.getElementById('inscription-content');
+            inscriptionContent.style.display = (inscriptionContent.style.display === 'none') ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
